@@ -12,3 +12,12 @@ strip ptouch-770-write
 make
 sudo cp ptouch-770-write /usr/local/bin/
 ```
+## Usage
+
+Print a test image with
+
+```
+sudo ptouch-770-write tux-128px-bw.pbm
+```
+
+On the P700, this will result in the printer spitting out approximately 20mm of unprinted label, then cutting the label, then printing the Tux graphic on another approx. 20mm of label and cutting the label again.
