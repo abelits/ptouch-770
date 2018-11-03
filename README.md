@@ -7,7 +7,7 @@ On Debian/Ubuntu-like systems, compile and install with
 ```
 git clone https://github.com/abelits/ptouch-770
 cd ptouch-770/
-sudo apt install make gcc libudev-dev
+sudo apt install make gcc libudev-dev python3-pil
 make
 strip ptouch-770-write
 sudo cp ptouch-770-write ptouch-770-gui /usr/local/bin/
