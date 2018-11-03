@@ -10,7 +10,7 @@ cd ptouch-770/
 sudo apt install make gcc libudev-dev
 make
 strip ptouch-770-write
-sudo cp ptouch-770-write /usr/local/bin/
+sudo cp ptouch-770-write ptouch-770-gui /usr/local/bin/
 ```
 ## Usage (Python GTK3 GUI)
 
