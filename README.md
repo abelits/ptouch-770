@@ -12,7 +12,15 @@ make
 strip ptouch-770-write
 sudo cp ptouch-770-write /usr/local/bin/
 ```
-## Usage
+## Usage (Python script)
+
+The Python script can be used to print multi-line text like this:
+
+```
+./ptouch-770.py --text "test\nfoo"
+```
+
+## Usage (raw tool)
 
 Print a test image with
 
