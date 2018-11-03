@@ -40,7 +40,7 @@ image = Image.new("1", ( max_width, max_height ), 0)
 draw = ImageDraw.Draw( image )
 
 text_x = args.rim
-text_y = 20-text_height
+text_y = unprintable-text_height
 for line in text:
     text_y = text_y + text_height*0.9
     draw.text((text_x,text_y), line, fill=255, font=font)
