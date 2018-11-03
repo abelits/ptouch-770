@@ -1,4 +1,4 @@
-# Brother PT-H500/P700/E500 printer control utility.
+# Brother P-touch P700 label printer for Linux
 
 ## Building
 
@@ -12,6 +12,10 @@ make
 strip ptouch-770-write
 sudo cp ptouch-770-write /usr/local/bin/
 ```
+## Usage (Python GTK3 GUI)
+
+![screenshot](https://user-images.githubusercontent.com/2480569/47957306-38ca8c00-dfab-11e8-8d83-3d81aa30278f.png)
+
 ## Usage (Python script)
 
 The Python script can be used to print multi-line text like this:
