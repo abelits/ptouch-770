@@ -1,0 +1,7 @@
+[Desktop Entry]
+Type=Application
+Name=P-touch P700 Labels
+Comment=Print labels on the Brother P-touch P700
+Icon=printmgr
+Exec=ptouch-770-gui
+Categories=2DGraphics;
