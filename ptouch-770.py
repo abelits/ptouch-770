@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+#!/usr/bin/env python3
 
 # Based on https://github.com/SquirrelCZE/ptouch-770
 # On 12mm tape, the topmost 20px are not printed, the following 84 px are printed
