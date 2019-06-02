@@ -6,6 +6,7 @@ ingredients:
     - python3-pil
     - python-usb
     - libusb-1.0-0
+    - python3-gi
   dist: trusty
   sources: 
     - deb http://us.archive.ubuntu.com/ubuntu/ trusty main universe
