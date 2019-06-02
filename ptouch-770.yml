@@ -16,3 +16,4 @@ script:
   - mkdir -p usr/share/applications && cp ../../ptouch-770.desktop usr/share/applications/
   - mkdir -p usr/share/icons/hicolor/scalable/apps && touch usr/share/icons/hicolor/scalable/apps/printmgr.svg
   - cp ./usr/share/applications/ptouch-770.desktop . # Why do I need to do this manually?
+  - cp usr/share/icons/hicolor/scalable/apps/printmgr.svg . # Dito
