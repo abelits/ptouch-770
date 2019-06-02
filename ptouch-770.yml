@@ -7,6 +7,7 @@ ingredients:
     - python-usb
     - libusb-1.0-0
     - python3-gi
+    - gir1.2-gtk-3.0
   dist: trusty
   sources: 
     - deb http://us.archive.ubuntu.com/ubuntu/ trusty main universe
