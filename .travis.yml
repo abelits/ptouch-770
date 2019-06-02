@@ -4,7 +4,7 @@ sudo: require
 dist: trusty
 
 install:
-  - sudo apt-get -y install libudev-dev python3-pil
+  - sudo apt-get -y install libudev-dev python3-pil desktop-file-utils
 
 script:
   - make -j$(nproc)
