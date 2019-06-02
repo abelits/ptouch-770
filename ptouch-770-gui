@@ -30,12 +30,13 @@ class MyWindow(Gtk.ApplicationWindow):
             vbox.pack_start(entry, False, False, 0)
             self.entries.append(entry)
 
-        fonts = ["FreeSans.ttf", "FreeSans-Bold.ttf"]
+        fonts = ["FreeSans.ttf", "FreeSansBold.ttf"]
         fonts_combo = Gtk.ComboBoxText()
         fonts_combo.set_entry_text_column(0)
         for currency in fonts:
             fonts_combo.append_text(currency)
         vbox.pack_start(fonts_combo, False, False, 0)
+        fonts_combo.connect("changed", self.on_fonts_combo_changed)
 
         self.inverted = Gtk.CheckButton("Invert")
         self.inverted.show()
@@ -51,6 +52,19 @@ class MyWindow(Gtk.ApplicationWindow):
         vbox.pack_start(self.button, False, False, 0)
 
         self.add(vbox)
+
+    def on_fonts_combo_changed(self, combo):
+        tree_iter = combo.get_active_iter()
+        if tree_iter is not None:
+            model = combo.get_model()
+            row_id, name = model[tree_iter][:2]
+            print("Selected: ID=%s" % (row_id))
+            self.font = row_id
+        else:
+            entry = combo.get_child()
+            print("Entered: %s" % entry.get_text())
+        self.on_text_changed(None)
+
 
     def on_button_toggled(self, button, name):
         if button.get_active():
