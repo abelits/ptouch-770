@@ -10,7 +10,7 @@ ingredients:
   sources: 
     - deb http://us.archive.ubuntu.com/ubuntu/ trusty main universe
   script:
-    - $(git rev-parse --short HEAD) > VERSION
+    - git rev-parse --short HEAD > VERSION
 
 script:
   - mkdir -p usr/bin
