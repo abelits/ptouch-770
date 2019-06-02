@@ -3,7 +3,7 @@ app: ptouch-770
 ingredients:
   packages:
     - python3-pil
-    - python3-usb
+    - python-usb
     - libusb-1.0-0
   dist: trusty
   sources: 
