@@ -5,9 +5,9 @@
 On Debian/Ubuntu-like systems, compile and install with
 
 ```
+sudo apt install git make gcc libudev-dev python3-pil python-usb libusb-1.0-0 python3-gi gir1.2-gtk-3.0
 git clone https://github.com/abelits/ptouch-770
 cd ptouch-770/
-sudo apt install make gcc libudev-dev python3-pil python-usb libusb-1.0-0 python3-gi gir1.2-gtk-3.0
 make
 strip ptouch-770-write
 sudo cp ptouch-770-write ptouch-770-gui /usr/local/bin/
