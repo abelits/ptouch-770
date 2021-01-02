@@ -67,11 +67,15 @@ class MyWindow(Gtk.ApplicationWindow):
             if "rfcomm" in device:
                 devices.append("/dev/" + device)
 
+        if len(devices) == 0:
+            devices.append("NO DEVICES FOUND")
+
         self.devices_combo = Gtk.ComboBoxText()
         self.devices_combo.set_entry_text_column(0)
         for currency in devices:
             self.devices_combo.append_text(currency)
         vbox.pack_start(self.devices_combo, False, False, 0)
+        self.devices_combo.set_active(0)
 
         self.inverted = Gtk.CheckButton("Invert")
         self.inverted.show()
