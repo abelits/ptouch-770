@@ -537,7 +537,8 @@ int main(int argc, char **argv)
 		     && !strcasecmp(vendor,"04f9") /* Brother */
 		     && (!strcasecmp(product,"205e") /* PT-H500 */
 			 || !strcasecmp(product,"205f") /* PT-E500 */
-			 || !strcasecmp(product,"2061") /* PT-P700 */))
+			 || !strcasecmp(product,"2061") /* PT-P700 */
+			 || !strcasecmp(product,"2064") /* PT-P700 */))
 		    {
 		      devpath_found = udev_device_get_devnode(udev_dev);
 		      if(devpath_found)

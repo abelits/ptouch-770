@@ -1,0 +1,29 @@
+app: ptouch-770
+
+ingredients:
+  packages:
+    - python3
+    - python3-pil
+    - python-usb
+    - libusb-1.0-0
+    - python3-gi
+    - gir1.2-gtk-3.0
+    - python3-click
+    - python3-gi-cairo
+    - python3-cairo
+
+  dist: trusty
+  sources: 
+    - deb http://us.archive.ubuntu.com/ubuntu/ trusty main universe
+  script:
+    - git rev-parse --short HEAD > VERSION
+
+script:
+  - mkdir -p usr/bin
+  - cp ../../ptouch-770-gui usr/bin
+  - cp ../../ptouch-770-write usr/bin
+  - chmod +x usr/bin/*
+  - mkdir -p usr/share/applications && cp ../../ptouch-770.desktop usr/share/applications/
+  - mkdir -p usr/share/icons/hicolor/256x256/apps && cp ../../ptouch-770-gui.png usr/share/icons/hicolor/256x256/apps/
+  - cp ./usr/share/applications/ptouch-770.desktop . # Why do I need to do this manually?
+  - cp usr/share/icons/hicolor/256x256/apps/printmgr.png . # Dito

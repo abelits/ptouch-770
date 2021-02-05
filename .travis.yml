@@ -1,0 +1,21 @@
+language: cpp
+compiler: gcc
+sudo: require
+dist: trusty
+
+install:
+  - sudo apt-get -y install libudev-dev python3-pil desktop-file-utils
+
+script:
+  - make -j$(nproc)
+  - wget -c "https://raw.githubusercontent.com/AppImage/pkg2appimage/master/pkg2appimage"
+  - bash -ex pkg2appimage ptouch-770.yml
+
+after_success:
+  - wget -c https://github.com/probonopd/uploadtool/raw/master/upload.sh
+  - bash upload.sh out/P-touch_P700_Labels*.AppImage*
+  
+branches:
+  except:
+    - # Do not build tags that we create when we upload to GitHub Releases
+    - /^(?i:continuous)/
